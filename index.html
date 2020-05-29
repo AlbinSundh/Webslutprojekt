@@ -1,36 +1,79 @@
 <!DOCTYPE html><!-- bestämmer vilken htmlversion som ska tolkas -->
-<html lang="sv"><!-- bestämmer på vilket språk sidan ska tolkas -->
-	<head><!-- dokumentets head	-->
-		<title>Counter-Strike Startsida</title><!-- namnger hemsidan-->
-		<meta charset="utf-8"><!-- bestämmer vilken unicode som används -->
-		<link href="style.css" rel="stylesheet"> <!-- länkar till cssdokumentet -->
-	</head><!-- avslutar head -->
-	<body><!-- starar body -->
-		<nav> <!-- skapar en navbar/global meny -->
-			<ul><!-- skapar en osorterad lista  -->
-				<li><a  class="active" href="index.html">Startsida</a></li> <!-- länkar de övriga sidorna och namnger länkarna -->
-				<li><a href="ProjektCounter-StrikeConditionZero.html">Condition Zero</a></li><!-- länkar de övriga sidorna och namnger länkarna -->
-				<li><a href="ProjektCounter-StrikeGlobalOffensive.html">Global Offensive</a></li><!-- länkar de övriga sidorna och namnger länkarna -->
-				<li><a href="ProjektCounter-Strike.html">Counter Strike</a></li> <!-- länkar de övriga sidorna och namnger länkarna -->
-				<li><a href="ProjektCounter-StrikeZero.html">Source</a></li><!-- länkar de övriga sidorna och namnger länkarna -->
-				<li><a href="ProjektTävlingarochlag.html">Tävlingar och Lag</a></li><!-- länkar de övriga sidorna och namnger länkarna -->
-			</ul><!-- avslutar ul -->
-		</nav>    <!-- avslutar nav -->
-		<div class="infotext"> <!-- skapar en div som gör att all text på startsidan blir likadan  -->
-			<h1>Counter-Strike</h1> <!-- skapar en h1-rubrik -->
-			<pre><!-- skapar en pre som visar upp texten på samma sätt som den är skriven i htmldokumentet -->
-				Counter-Strike spel serien är skapad av value. 
-				De första spelet var Counter-Strike och det blev skapat 2000. 
-				Men deras första stora genomslag var Counter-Strike Source. 
-				Sen deras nyaste och största genomslag är Counter-Strike: Global Offensive.
-			</pre> <!-- avslutar pre -->
-		</div>		<!-- avslutar div -->
-		<form action="/action_page.php">
-			<label for="fname">Vad tyckte du om hemsdian:</label><br>
-			<input type="text" id="fname" name="fname" value=""><br>
-			<label for="lname">Vad skulle du vilja se förbättrning på:</label><br>
-			<input type="text" id="lname" name="lname" value=""><br><br>
-			<input type="submit" value="Submit">
-		</form> 
-	</body><!-- avslutar body -->
-</html><!-- avslutar html -->
+<html lang="sv">
+   <!-- bestämmer på vilket språk sidan ska tolkas -->
+   <head>
+      <!-- dokumentets head	-->
+      <title>Counter-Strike Startsida</title>
+      <!-- namnger hemsidan-->
+      <meta charset="utf-8">
+      <!-- bestämmer vilken unicode som används -->
+      <link href="style.css" rel="stylesheet">
+      <!-- länkar till cssdokumentet -->
+   </head>
+   <!-- avslutar head -->
+   <body>
+      <!-- starar body -->
+	  <header>
+      <nav>
+         <!-- skapar en navbar/global meny -->
+         <ul>
+            <!-- skapar en osorterad lista  -->
+            <li><a  class="active" href="index.html">Startsida</a></li>
+            <!-- länkar de övriga sidorna och namnger länkarna -->
+            <li><a href="ProjektCounter-StrikeConditionZero.html">Condition Zero</a></li>
+            <!-- länkar de övriga sidorna och namnger länkarna -->
+            <li><a href="ProjektCounter-StrikeGlobalOffensive.html">Global Offensive</a></li>
+            <!-- länkar de övriga sidorna och namnger länkarna -->
+            <li><a href="ProjektCounter-Strike.html">Counter Strike</a></li>
+            <!-- länkar de övriga sidorna och namnger länkarna -->
+            <li><a href="ProjektCounter-StrikeZero.html">Source</a></li>
+            <!-- länkar de övriga sidorna och namnger länkarna -->
+            <li><a href="ProjektTävlingarochlag.html">Tävlingar och Lag</a></li>
+            <!-- länkar de övriga sidorna och namnger länkarna -->
+         </ul>
+         <!-- avslutar ul -->
+      </nav>
+      <!-- avslutar nav -->
+	  <´/header>
+      <main class="infotext">
+         <!-- skapar en main som gör att all text på startsidan blir likadan  -->
+         <h1>Counter-Strike</h1>
+         <!-- skapar en h1-rubrik -->
+         <p id="textColor">
+            <!-- skapar en paragraph som visar upp texten på samma sätt som den är skriven i htmldokumentet -->
+            Counter-Strike spel serien är skapad av value. 
+            De första spelet var Counter-Strike och det blev skapat 2000. 
+            Men deras första stora genomslag var Counter-Strike Source. 
+            Sen deras nyaste och största genomslag är Counter-Strike: Global Offensive.
+         </p>
+         <!-- avslutar paragraph -->
+      </main>
+      <!-- avslutar main -->
+      <form action="index.html" method="post">
+         <!-- Skapar ett formulär -->
+        <label for="fname">Namn:</label><br> <!-- Fösta frågan -->
+		<input type="text" id="name" name="name" value=""><br> <!-- Där man skriver svar-->
+		Vilket kön?<br>
+		<input type="radio" id="Kille" name="gender" value="Kille">
+		<label for="Kille">Kille</label><br>
+		<input type="radio" id="Tjej" name="gender" value="Tjej">
+		<label for="Tjej">Tjej</label><br>
+		Hur tar du dig till runt i din stad?<br>
+		<input type="checkbox" id="vehicle1" name="vehicle1" value="cykel">
+		<label for="vehicle1"> Cykel</label><br>
+		<input type="checkbox" id="vehicle2" name="vehicle2" value="bil">
+		<label for="vehicle2"> Bil</label><br>
+		<input type="checkbox" id="vehicle3" name="vehicle3" value="buss">
+		<label for="vehicle3"> Buss</label><br>
+		Vad tycker du om din stad?<br>
+		<textarea rows="4" cols="50" name="comment" form="usrform">
+		Enter text here...</textarea><br>
+		<label for="pwd">Password:</label><br>
+		<input type="password" id="pwd" name="pwd"><br>
+        <input type="Submit" value="Skicka"> <!-- Där man gör klart formulärtet -->
+      </form>
+      <!-- Avslutar formuläret -->
+   </body>
+   <!-- avslutar body -->
+</html>
+<!-- avslutar html -->

@@ -1,19 +1,13 @@
-*{ 
-	padding: 0;
-	margin: 0;
-	/*tar bort mällanrum mellan nav-bar och skärmkanten*/
-}
 body { 
 	background-image: url("https://cdn.hipwallpaper.com/i/64/91/lJOniu.png"); /*Lägger bakgrundsbild på hela sida*/
 }
-nav{
-	height:50px; /*Bestämmer höjden på globala menyn*/
-}
+
 nav ul{
 	display:flex; /*sätter lista till flex-läge*/
-	width:100%;/*sätter full bredd listan*/
-	height:100%;/*bestämmer höjd på listan*/
+	width:95%;/*sätter 95% av bredden på listan*/
+	height:100%;/*sätter full höjd på listan*/
 }
+
 nav li {
 	display: flex; 
 	justify-content: space-around; /*Gör förhållandet mellan länkarna lika stora*/
@@ -23,6 +17,7 @@ nav li {
 	width: 33.33333333333%;
 	height: 100%;
 }
+
 nav a{
 	text-decoration: none;
 	display:inline-block;/*Den gör den relativ till margin och padding*/
@@ -35,19 +30,33 @@ nav a{
 	font-weight: bold;/*Gör tjock text*/
 	color: #aaa;/*text färg*/	
 }
+
 nav a:hover{
-	color:#333333;
+	color: rgb(51, 51, 51);
 	background-color: #aaa;
 	width:100%;
+} /*gör så att när man håller musen över objektet ändrar färgen till ljusgrå*/
+
+
+#textColor {
+	background-color: #b07727; /*gör en id selektor till bakgrundsfärgen orange*/
 }
+
+
 .active{
 	background-color: #aaa;
-	color: #333333;
+	color: hsl(0, 0%, 20%);
 }
-.active2{ /*klass som används för att visa vilket sida man är på just nu*/
+
+nav a:active2{ /*klass som används för att visa vilket sida man är på just nu*/
 	background-color: white; /*sätter bakgrundsfärgen*/
 	color: black; /*textfärgen blir svart*/
 }
+
+a:visited{
+	background-color:yellow;
+} 
+
 h1 { /*sidotitel*/
 	text-align:center; /*sentrerar text*/
 	background-color: white;
@@ -62,29 +71,29 @@ h1 { /*sidotitel*/
     height: auto; /*höjd*/
 	color: #aaa; /*textfärg*/
 }
-pre {/*text*/
+
+p {/*text*/
 	text-align:center; 
 	background-color: white;
-    	margin-right: 20em;
-    	margin-left: 20em;
-    	padding: 25px; 
+    margin-right: 20em;
+    margin-left: 20em;
+    padding: 25px; 
 	border-style: solid;/*Bestämmer att kanterna runt text ska vara hela sträck*/
    	border-color: #333333;
-    	border-width: 10px;
+    border-width: 10px;
 	font-size: 115%;
 	margin-bottom: 20px;
 }
 
 form {
-	color: blue;
+	color: blue; /*Ändra färgen på texten i formuläret*/
 }
 
-.video{
+video{ /*Vidoens klass*/
 	width: 560px;
-	height: 315px;
-	frameborder: 0px;
-	
+	height: 315px;	
 }
+
 table{/*tabellen*/
 	background-color: white;
 	text-align: center;
@@ -92,17 +101,18 @@ table{/*tabellen*/
 	margin-right: auto;
 	border-collapse: collapse;/*sätter ihop de olika delarna av tabellen*/
 }
+
 table, th, td{
 	border: 2px solid black; /*färg och storlek på ramen runt tabellen*/
 }
+
 th, td{
 	padding: 15px;
 }
-.lag{
+.lag{ /*Bilderna på lagens klass*/
 	height: 30px;
 	width: 30px;
 } 
-
 
 tbody tr:nth-child(even){/*Bestämmer för jämna rader*/
 	background-color: lightgray;
@@ -112,29 +122,31 @@ tbody tr:nth-child(even){/*Bestämmer för jämna rader*/
 table tr > td:nth-child(3) > img{/*berör bilderna på tredje kolumnen i tabellen*/
 	width:100px;
 	padding: 2px;
-	
 }	
 
 table tr > td:nth-child(4) > img{/*berör bilderna i fjädre kolumnen i tabellen*/
 	width: 230px;
 	padding: 0ch;
 	margin: 0rem;
-
 }
 
 table tr > td:nth-child(4){/*Berör fjädre kolumnen*/
 	padding: 0vw;	
 	border-bottom: none;
-	
-	
 }
+
 thead{
     background-color:gray;/*ändrar färg på övre delen av tabellen*/
 }
-.Bild1{
+
+img{
 	display: block;
 	margin-left: 40%;
 	margin-top: 1%;
 	width: 500px;
 	height: 250px;
+}
+li{
+	color:Blue;
+	
 }
